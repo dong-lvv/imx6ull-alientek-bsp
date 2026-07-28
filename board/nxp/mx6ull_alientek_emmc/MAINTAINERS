@@ -1,0 +1,8 @@
+MX6ULL_ALIENTEK_EMMC BOARD
+M:	Peng Fan <peng.fan@nxp.com>
+S:	Maintained
+F:	board/nxp/mx6ull_alientek_emmc/
+F:	include/configs/mx6ull_alientek_emmc.h
+F:	configs/mx6ull_alientek_emmc_defconfig
+F:	configs/mx6ull_alientek_emmc_plugin_defconfig
+F:	configs/mx6ulz_alientek_emmc_defconfig
