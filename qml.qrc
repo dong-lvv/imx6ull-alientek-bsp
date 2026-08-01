@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>icons/light.png</file>
+        <file>icons/weather.png</file>
+        <file>icons/video.png</file>
+        <file>icons/setting.png</file>
+        <file>icons/music.png</file>
+        <file>icons/jisuanqi.png</file>
+        <file>icons/bilibili.png</file>
+        <file>icons/photos.png</file>
+        <file>icons/games.png</file>
+        <file>icons/resources.png</file>
+        <file>icons/dir.png</file>
+        <file>icons/file.png</file>
+        <file>qml/resources.qml</file>
+        <file>qml/light.qml</file>
+        <file>qml/calculator.qml</file>
+        <file>qml/photos.qml</file>
+        <file>qml/setting.qml</file>
+        <file>qml/video.qml</file>
+    </qresource>
+</RCC>
