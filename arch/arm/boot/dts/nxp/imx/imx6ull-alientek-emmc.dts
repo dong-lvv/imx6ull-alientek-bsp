@@ -83,20 +83,24 @@
             compatible = "ethernet-phy-ieee802.3-c22";
             reg = <1>;
         };
-    };
+    }; 
 };
 
 &i2c2 {
     ft5426: ft5426@38 {
-        compatible = "alientek,ft5x06";
+        compatible = "focaltech,ft5426";
         reg = <0x38>;
+
         pinctrl-names = "default";
         pinctrl-0 = <&pinctrl_tsc1_alientek &pinctrl_tsc_reset>;
+
         interrupt-parent = <&gpio1>;
-        
-        
+        interrupts = <9 IRQ_TYPE_EDGE_FALLING>;
         reset-gpios = <&gpio5 9 GPIO_ACTIVE_LOW>;
-        interrupt-gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
+
+        touchscreen-size-x = <800>;
+        touchscreen-size-y = <480>;
+        touchscreen-swapped-x-y;
     };
 };
 
