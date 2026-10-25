@@ -81,14 +81,7 @@ Rectangle {
                 onPressed: parent.opacity = 0.7
                 onReleased: parent.opacity = 1.0
                 onClicked: {
-                    // ==========================================
-                    // ⚠️ 这里预留给你未来接入独立播放器 QML 的接口
-                    // ==========================================
-                    console.log("准备把这个文件传给独立播放器: " + fileUrl)
-
-                    // 未来你可以在这里写类似这样的逻辑：
-                    // playerLoader.source = "qrc:/qml/player.qml"
-                    // playerLoader.item.videoUrl = fileUrl
+                    appWindowLoader.setSource("qrc:/qml/player.qml", { "videoUrl": fileUrl })
                 }
             }
         }

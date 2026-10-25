@@ -19,5 +19,11 @@
         <file>qml/photos.qml</file>
         <file>qml/setting.qml</file>
         <file>qml/video.qml</file>
+        <file>qml/player.qml</file>
+        <file>qml/camera.qml</file>
+        <file>qml/carnum.qml</file>
+        <file>qml/wallpaper.qml</file>
+        <file>icons/camera.png</file>
+        <file>icons/wallpaper.png</file>
     </qresource>
 </RCC>

@@ -1,0 +1,18 @@
+{
+    // C/C++ 插件：使用上面的交叉编译配置，而不是本机 x86 的 gcc
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-arm",
+    "C_Cpp.default.compilerPath": "/home/lv/Linux/imx6ull_ws/GCC/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-g++",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "C_Cpp.errorSquiggles": "enabled",
+
+    // CMake Tools：构建目录固定为 build/，编译器已在 CMakeLists.txt 中硬编码，无需指定 kit
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+    "cmake.skipConfigureIfCachePresent": false,
+
+    // 文件关联
+    "files.associations": {
+        "*.qrc": "xml"
+    }
+}

@@ -1,6 +1,7 @@
 import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.14
+import MyHardware 1.0
 
 Window {
     visible: true
@@ -38,10 +39,22 @@ Window {
               appWindowLoader.source = "qrc:/qml/video.qml"
               appWindowLoader.active = true
          }
+        else if (appId === "camera") {
+              appWindowLoader.source = "qrc:/qml/camera.qml"
+              appWindowLoader.active = true
+         }
+        else if (appId === "wallpaper") {
+              appWindowLoader.source = "qrc:/qml/wallpaper.qml"
+              appWindowLoader.active = true
+         }
+        else if (appId === "carnum") {
+              appWindowLoader.source = "qrc:/qml/carnum.qml"
+              appWindowLoader.active = true
+         }
     }
 
     // ==========================================
-    // 0. 背景层
+    // 0. 背景层（默认渐变；设置壁纸后拉伸铺满 800x480）
     // ==========================================
     Rectangle {
         anchors.fill: parent
@@ -49,6 +62,15 @@ Window {
             GradientStop { position: 0.0; color: "#4facfe" }
             GradientStop { position: 1.0; color: "#00f2fe" }
         }
+    }
+
+    Image {
+        id: wallpaperImage
+        anchors.fill: parent
+        source: Wallpaper.path // 存的是完整 file:// URL，为空时显示默认渐变
+        fillMode: Image.Stretch // 拉伸铺满整个屏幕
+        asynchronous: true
+        z: 0
     }
 
     // ==========================================
@@ -142,6 +164,9 @@ Window {
                     ListElement { name: "音乐"; appId: "music"; iconSource: "qrc:/icons/music.png" }
                     ListElement { name: "计算器"; appId: "calculator"; iconSource: "qrc:/icons/jisuanqi.png" }
                     ListElement { name: "视频"; appId: "video"; iconSource: "qrc:/icons/video.png" }
+                    ListElement { name: "相机"; appId: "camera"; iconSource: "qrc:/icons/camera.png" }
+                    ListElement { name: "车牌识别"; appId: "carnum"; iconSource: "qrc:/icons/camera.png" }
+                    ListElement { name: "壁纸"; appId: "wallpaper"; iconSource: "qrc:/icons/wallpaper.png" }
                     ListElement { name: "设置"; appId: "setting"; iconSource: "qrc:/icons/setting.png" }
                     ListElement { name: "哔哩哔哩"; appId: "bilibili"; iconSource: "qrc:/icons/bilibili.png" }
                     ListElement { name: "游戏"; appId: "games"; iconSource: "qrc:/icons/games.png" }

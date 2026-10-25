@@ -1,0 +1,4 @@
+/home/lv/QtProjects/mxui/build/CMakeFiles/edit_cache.dir
+/home/lv/QtProjects/mxui/build/CMakeFiles/rebuild_cache.dir
+/home/lv/QtProjects/mxui/build/CMakeFiles/mxui.dir
+/home/lv/QtProjects/mxui/build/CMakeFiles/mxui_autogen.dir
